@@ -14,6 +14,10 @@
 ```bash
 $ npm i dora dora-plugin-json-server -D
 $ ./node_modules/.bin/dora --plugins json-server
+
+## With arguments
+$ ./node_modules/.bin/dora --plugins json-server?router=./index.js
+$ ./node_modules/.bin/dora --plugins "json-server?router=./index.js&mount=/"
 ```
 
 ## Test
@@ -22,7 +26,7 @@ $ ./node_modules/.bin/dora --plugins json-server
 $ npm test
 ```
 
-## Options
+## Arguments
 
 - `router` - Specify file path or url as db, Default `json-server.json`
 - `mount` - Path to mount, Default `/api`
