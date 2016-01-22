@@ -1,6 +1,7 @@
 import dora from 'dora';
 import { join } from 'path';
 import request from 'request';
+import expect from 'expect';
 
 const port = '12345';
 
@@ -16,8 +17,17 @@ describe('index', () => {
   });
 
   it('GET /package.json', done => {
-    request(`http://localhost:${port}`, (err, res, body) => {
-      expect(body.indexOf('index.js') > -1).toExist();
+    request(`http://localhost:${port}/api/posts`, (err, res, body) => {
+      expect(JSON.parse(body)).toEqual([
+        {
+          id: 1,
+          content: 'foo',
+        },
+        {
+          id: 2,
+          content: 'bar',
+        },
+      ]);
       done();
     });
   });
