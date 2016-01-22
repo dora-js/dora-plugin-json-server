@@ -3,6 +3,10 @@ publish:
 	npm run build
 	npm publish
 
-publish-sync: publish
-	cnpm sync dora-plugin-proxy
-	tnpm sync dora-plugin-proxy
+sync:
+	cnpm sync dora-plugin-json-server
+	tnpm sync dora-plugin-json-server
+
+publish-sync:
+	make publish
+	make sync
