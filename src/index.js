@@ -1,5 +1,5 @@
 import { join } from 'path';
-import jsonServer from 'json-server';
+import jsonServer from 'json-server-fix-statuscode';
 import c2k from 'koa-connect';
 import chalk from 'chalk';
 

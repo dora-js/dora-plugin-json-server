@@ -18,6 +18,7 @@ describe('index', () => {
 
   it('GET /package.json', done => {
     request(`http://localhost:${port}/api/posts`, (err, res, body) => {
+      expect(res.statusCode).toEqual(200);
       expect(JSON.parse(body)).toEqual([
         {
           id: 1,

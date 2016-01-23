@@ -1,6 +1,6 @@
 {
   "name": "dora-plugin-json-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/dora-js/dora-plugin-json-server"
@@ -20,8 +20,9 @@
     "lint"
   ],
   "dependencies": {
+    "babel-polyfill": "^6.3.14",
     "chalk": "^1.1.1",
-    "json-server": "^0.8.6",
+    "json-server-fix-statuscode": "^0.8.7",
     "koa-connect": "^1.0.0"
   },
   "devDependencies": {
